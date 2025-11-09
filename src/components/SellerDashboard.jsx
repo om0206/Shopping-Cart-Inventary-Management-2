@@ -225,7 +225,7 @@ const OrdersTab = ({ orders }) => (
               />
               <span>{order.productName}</span>
             </td>
-            <td className="p-4 font-bold text-cyan-400">₹{order.price}</td>
+            <td className="p-4 font-bold text-cyan-500">₹{order.price}</td>
             <td className="p-4">{order.customerEmail}</td>
             <td className="p-4">
               <span
