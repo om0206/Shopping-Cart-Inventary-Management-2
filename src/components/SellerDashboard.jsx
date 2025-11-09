@@ -34,6 +34,19 @@ const ProductModal = ({ isOpen, onClose, onSubmit, product, mode }) => {
       });
     }
   }, [product, mode, isOpen]);
+    useEffect(() => {
+    if (mode === 'edit' && product) {
+      setFormData(product);
+    } else {
+      setFormData({
+        imageUrl: '',
+        name: '',
+        description: '',
+        rating: 5,
+        price: 0,
+      });
+    }
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
